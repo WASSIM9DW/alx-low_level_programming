@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 int find_len(char *str);
 char *create_xarray(int size);
@@ -34,7 +36,7 @@ int find_len(char *str)
 char *create_xarray(int size)
 {
 	char *array;
-	int intex;
+	int index;
 
 	array = malloc(sizeof(char) * size);
 
@@ -98,7 +100,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 {
 	int mult_len, num, tens = 0;
 
-	mult_len = find_len(ult) - 1;
+	mult_len = find_len(mult) - 1;
 	mult += mult_len;
 
 	while (*prod)
